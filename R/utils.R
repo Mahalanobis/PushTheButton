@@ -19,11 +19,11 @@ nrounds.par.prob <- rev(log(nrounds.par.quali+1)/sum(log(nrounds.par.quali+1)))
 nrounds.par <- sample( nrounds.par.quali , size=1 , prob=nrounds.par.prob)
 
 
-top.params					<- list(	eta.par = eta.par,
-										max.depth.par = max.depth.par,
-										colsample.bytree.par = colsample.bytree.par,
-										subsample.par = subsample.par,
-										nrounds.par = nrounds.par )
+top.params <- list(	eta.par = eta.par,
+			max.depth.par = max.depth.par,
+			colsample.bytree.par = colsample.bytree.par,
+			subsample.par = subsample.par,
+			nrounds.par = nrounds.par )
 
 return(top.params)
 
