@@ -35,7 +35,7 @@ return(top.params)
 ### ONE SHOT MODEL
 
 # Gradient Boosting Trees - Uniform Step1
-GBT.try.params.uniform.step1 <- function( num.repeats , par.range ){
+GBT.try.params.uniform.step1 <- function( Y, X, par.range, num.repeats ){
 
 temp.params <- GBT.generate.params.uniform.step1(par.range=par.range)
 
@@ -105,5 +105,26 @@ return(temp.tune.final)
 
 }
 
+
+
+### PUSHTHEBUTTON
+
+# Gradient Boosting Trees - Uniform Step1
+GBT.pushthebutton 	<- function(	Y,
+					X,
+					par.range,
+					num.iterations,
+					num.repeats){
+	temp.tune 	<- data.frame()
+	for( i in 1:num.iterations){
+		temp 		<- GBT.try.params.uniform.step1(	Y=Y,
+									X=X,
+									par.range=par.range,
+									num.repeats=num.repeats )
+		temp.tune 	<- rbind(temp.tune,temp)
+		}
+temp.tune <- temp.tune[order(-temp.tune$auc),]		
+return(temp.tune)
+}
 
 
