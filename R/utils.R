@@ -63,15 +63,15 @@ dtrain <- xgb.DMatrix(data = X[train.idx,], label = Y[train.idx])
 dvalid <- xgb.DMatrix(data = X[valid.idx,])
 
 param <- list(	"objective" = "binary:logistic",
-				"eval_metric" = "auc",
-				"eta" = eta.par,
-				"gamma" = gamma.par,
-				"max_depth" = max.depth.par,
-				"min_child_weight" = min.child.weight.par,
-				"max_delta_step" = max.delta.step.par,
-				"colsample_bytree" = colsample.bytree.par,
-				"subsample" = subsample.par,
-				"booster" = "gbtree")	
+		"eval_metric" = "auc",
+		"eta" = eta.par,
+		"gamma" = gamma.par,
+		"max_depth" = max.depth.par,
+		"min_child_weight" = min.child.weight.par,
+		"max_delta_step" = max.delta.step.par,
+		"colsample_bytree" = colsample.bytree.par,
+		"subsample" = subsample.par,
+		"booster" = "gbtree")	
 				
 bst <- xgboost(param=param, data = dtrain, nround = nrounds.par)
 
