@@ -1,7 +1,8 @@
 
-## GENERATE PARAMETERS
+### GENERATE PARAMETERS
 
-GBT.generate.params.top.uniform <- function( par.range ){
+# Gradient Boosting Trees 
+GBT.generate.params.step1.uniform <- function( par.range ){
 
 eta.par.dist <- ( par.range[which(rownames(par.range)=="eta.par"),2] - par.range[which(rownames(par.range)=="eta.par"),1] )/20
 eta.par.quali	<- seq(from=par.range[which(rownames(par.range)=="eta.par"),1], to=par.range[which(rownames(par.range)=="eta.par"),2], by=eta.par.dist)
