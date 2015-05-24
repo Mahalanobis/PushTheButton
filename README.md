@@ -1,7 +1,7 @@
 # PushTheButton
 ======
 
-R package PushTheButton by Dario Solar, with contribution of Livio Finos
+R package PushTheButton by Dario Solari, with contribution of Livio Finos
 and associazionerospo.org.
 
 Install it in R using the following command
