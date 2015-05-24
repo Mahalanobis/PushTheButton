@@ -10,5 +10,7 @@ Install it in R using the following command
 >  #if you don't already have it.
 >  
 > library(devtools) 
+>
 > install_github("Mahalanobis/PushTheButton") 
+>
 > library(PushTheButton)
