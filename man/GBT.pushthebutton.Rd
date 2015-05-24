@@ -1,11 +1,10 @@
 \name{GBT.pushthebutton}
 \alias{GBT.pushthebutton}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
+\title{GBT.pushthebutton
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+GBT.pushthebutton
 }
 \usage{
 GBT.pushthebutton(Y, X, par.range, num.iterations, num.repeats)
@@ -13,19 +12,19 @@ GBT.pushthebutton(Y, X, par.range, num.iterations, num.repeats)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Y}{
-%%     ~~Describe \code{Y} here~~
+GBT.pushthebutton
 }
   \item{X}{
-%%     ~~Describe \code{X} here~~
+GBT.pushthebutton
 }
   \item{par.range}{
-%%     ~~Describe \code{par.range} here~~
+GBT.pushthebutton
 }
   \item{num.iterations}{
-%%     ~~Describe \code{num.iterations} here~~
+GBT.pushthebutton
 }
   \item{num.repeats}{
-%%     ~~Describe \code{num.repeats} here~~
+GBT.pushthebutton
 }
 }
 \details{
@@ -42,7 +41,7 @@ GBT.pushthebutton(Y, X, par.range, num.iterations, num.repeats)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Dario Solari
 }
 \note{
 %%  ~~further notes~~
@@ -54,22 +53,7 @@ GBT.pushthebutton(Y, X, par.range, num.iterations, num.repeats)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
-function (Y, X, par.range, num.iterations, num.repeats) 
-{
-    temp.tune <- data.frame()
-    for (i in 1:num.iterations) {
-        temp <- GBT.try.params.uniform.step1(Y = Y, X = X, par.range = par.range, 
-            num.repeats = num.repeats)
-        temp.tune <- rbind(temp.tune, temp)
-    }
-    temp.tune <- temp.tune[order(-temp.tune$auc), ]
-    return(temp.tune)
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
